@@ -31,18 +31,19 @@
        }
        div.innovation ul li {
        margin-bottom:12px;
+       font-size: .9em;
        }
        figcaption {
        font-size:12px;
        }
        .reveal p.miscItems, p, li {
-       font-size:.9em;
+       font-size:.8em;
        }
        .slides section h3 {
-       color: #444 !important; outline: gray;
+       color: #f19132 !important; outline: darkorange;
        margin:0px;
        /*padding-top: 80px;*/
-       font-size: 1.7em;
+       font-size: 1.8em;
        text-transform: none;
        }
        .slides img {
@@ -111,9 +112,12 @@
             <p><iframe width="560" height="315" src="https://www.youtube.com/embed/NawxzLB4aro" frameborder="0" allowfullscreen></iframe></p>
           </section> -->
 
-
+<section>
+<section>
+  <h2>Introduction</h2>
+</section>
           <section>
-            <h2>What I'll talk about</h2>
+            <h3>What I'll talk about</h3>
           <ul style="font-size: 90%">
             <li>What makes dev doc unique</li>
             <li>Dev doc design patterns</li>
@@ -126,18 +130,29 @@
           </section>
 
           <section>
-             <h2>Where to find more information</h2>
-             <a href="http://idratherbewriting.com/learnapidoc/"><img class="shortened" src="media/rasters/publishing-your-api-docs.png"/></a>
+             <h3>Where to find more information</h3>
+             <figure><a href="http://idratherbewriting.com/learnapidoc/"><img class="shortened" src="media/rasters/publishing-your-api-docs.png"/></a><figcaption><a href="http://idratherbewriting.com/learnapidoc/">idratherbewriting.com/learnapidoc</a></figcaption></figure>
           </section>
+
+          <section>
+            <h3>"API docs" versus "developer" docs</h3>
+            <ul>
+              <li>All API docs are developer docs, but not vice versa</li>
+              <li>API docs include both reference and non-reference content</li>
+              <li>Tool options in this space are mind-boggling</li>
+              <li>There's a tools gap for integrating reference and non-reference content</li>
+            </ul>
+          </section>
+        </section>
 
           <section>
             <section>
             <h2>What makes publishing developer docs unique?</h2>
             <ul>
-              <li>Developer contributors</li>
-              <li>API structure</li>
-              <li>Demo requests on page</li>
-              <li>Docs are product interface</li>
+              <li>Developer authors</li>
+              <li>API structure/templates</li>
+              <li>API requests demo'd on page</li>
+              <li>API docs are the product interface</li>
             </ul>
 </section>
 
@@ -173,40 +188,50 @@
           </section>
 
           <section>
-            <h3>More about Markdown</h3>
+            <h3>Markdown is preferred syntax</h3>
             <ul>
               <li>Readable as code</li>
               <li>Compatible with version control</li>
               <li>For semantics, define in YAML frontmatter</li>
               <li>Supplement with SSG scripting languages</li>
-              <li>Lack of standards creates tool lock-in</li>
+              <li>Risk: Lack of standards creates tool lock-in</li>
             </ul>
           </section>
 
           <section>
-            <h3>Version control systems</h3>
+            <h3>Git for managing content</h3>
             <ul>
               <li>Ingenious way to collaborate</li>
               <li>Helps you understand engineering workflows</li>
-              <li>More of a learning curve than the SSG</li>
-              <li>The model scales</li>
+              <li>More of a learning curve than your SSG</li>
+              <li>The Git model scales</li>
             </ul>
           </section>
+
+          <section>
+            <h3>Build from server</h3>
+            <ul>
+              <li>"Continuous delivery"</li>
+              <li>No manual uploading of files</li>
+              <li>Focus on content</li>
+            </ul>
+
+            </section>
 
           <section>
             <h3>Reference docs for APIs</h3>
             <ul>
-              <li>Common templates</li>
-              <li>OpenAPI specification</li>
-              <li>Swagger UI or other</li>
-              <li>Integrate reference with non-reference docs</li>
+              <li>Use templates for common API sections</li>
+              <li>Describe with OpenAPI specification</li>
+              <li>Render with Swagger UI or other</li>
+              <li>Integrate with non-reference docs</li>
             </ul>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>Publishing tools for developer docs</h2>
+            <h2>Authoring and publishing tools</h2>
             <img src="media/vectors/publishing-apis_publishingtools.svg"/>
           </section>
 
@@ -215,7 +240,7 @@
                 <ol>
                   <li><a href="https://www.staticgen.com/">Static site generators</a></li>
                   <li>Hosting and deployment options</li>
-                  <li>Online CMSs (mostly flat-file)</li>
+                  <li><a href="https://headlesscms.org/">Headless content management systems</a></li>
                   <li>Tools to render OpenAPI spec</li>
                 </ol>
               </section>
@@ -246,7 +271,7 @@
             </section>
 
             <section>
-              <h3>3. Online CMSs (mostly flat-file)</h3>
+              <h3>3. Headless CMSs</h3>
               <ul>
                 <li><a href="https://forestry.io/">Forestry.io</a></li>
                 <li><a href="https://www.netlifycms.org/">Netlify CMS</a></li>
@@ -272,6 +297,14 @@
 
             </section>
 
+            <section>
+              <h2>Problem</h2>
+
+                <p>Need to combine API reference docs with non-reference content.</p>
+                <img src="media/vectors/publishing-apis_integrationproblem.svg"/>
+
+            </section>
+
          <section>
             <h3>Which tool to choose for API docs?</h3>
             <ul>
@@ -284,13 +317,15 @@
 
 
           <section>
-            <h3>Current setup at work</h3>
+            <h3>My current setup at work</h3>
             <ul>
-              <li>Jekyll + custom theme</li>
+              <li>Jekyll + custom theme with no header/footer</li>
               <li>Use existing internal Git infrastructure</li>
               <li>Custom-built publishing pipeline</li>
-              <li>Builds output, then ingests HTML into S3</li>
-              <li>Server requests pull matching files from S3 store and insert into template</li>
+                <ul><li>Builds output, then ingests HTML into S3</li>
+                  <li>Server requests pull matching files from S3 store and insert into template with header/footer</li>
+                </ul>
+              <p><a href="https://developer.amazon.com/appstore/documentation">View sample</a></p>
             </ul>
           </section>
 
@@ -304,9 +339,9 @@
           <section>
             <h3>My experience switching to docs-as-code</h3>
             <ul>
-              <li>Mostly love it, would never go back.</li>
+              <li>Mostly love it, would never go back</li>
               <li>Continuous deployment with Git is the killer feature</li>
-              <li>Love the control and flexibility of open source</li>
+              <li>Love the control and flexibility of open source SSG</li>
               <li>Takes way more time than you think</li>
               <li>No good solution for search or translation</li>
             </ul>
@@ -315,22 +350,22 @@
           <section>
             <h3>Working with engineers on implementation</h3>
             <ul>
-              <li>Engineering involvement required for continuous deployment</li>
-              <li>Engineers understand infrastructure but not SSGs</li>
-              <li>1-2 repos max, feeding into same publishing pipeline</li>
               <li>3rd-party hosting ideal but difficult with Info Sec</li>
+              <li>Engineers understand infrastructure but not SSGs</li>
+              <li>You build the theme with the features you want</li>
+              <li>1-2 repos max, feeding into same publishing pipeline</li>
             </ul>
           </section>
 
           <section>
             <h3>Confusing landscape, but here's what I know</h3>
             <ul>
-              <li>There's a tradeoff between control/flexibility versus time/effort/responsibility</li>
               <li>Describe REST with OpenAPI spec</li>
               <li>Build continously from the server</li>
               <li>Manage content through Git</li>
               <li>Seek 3rd-party solutions when possible</li>
               <li>Don't spend infinity in the rabbit hole of tools</li>
+              <li>There's a tradeoff between control/flexibility versus time/effort/responsibility</li>
             </ul>
           </section>
         </section>
