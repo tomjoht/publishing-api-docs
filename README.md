@@ -1,2 +1,1 @@
-# publishing-api-docs
-Slides for Publishing API documentation presentation
+Contains my presentation titled "Publishing API Documentation." You can view the presentation here: [http://idratherbewriting.com/publishing-api-documentation](http://idratherbewriting.com/publishing-api-documentation/index.html).
