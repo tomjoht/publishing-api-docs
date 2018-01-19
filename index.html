@@ -104,7 +104,7 @@
              <p>
                 <small>By Tom Johnson / <a target="_blank" href="http://twitter.com/tomjohnson">@tomjohnson</a><br/>
                 <a target="_blank" href="http://idratherbewriting.com">idratherbewriting.com</a></small><br/><br/>
-                <p><small>Slides available at <br/><a target="_blank" href="http://idratherbewriting.com/publishing-api-documentation">idratherbewriting.com/publishing-api-documentation/</a></small></p>
+                <p><small>Slides available at <br/><a target="_blank" href="http://idratherbewriting.com/publishing-api-docs/index.html#/">idratherbewriting.com/publishing-api-docs</a></small></p>
              </p>
           </section>
           <!-- <section>
@@ -143,7 +143,7 @@
               <li>All API docs are developer docs, but not vice versa</li>
               <li>API docs include both reference and non-reference content</li>
               <li>Tool options in this space are mind-boggling</li>
-              <li>There's a tools gap for integrating reference and non-reference content</li>
+              <li>There's a tools gap for integrating reference and <br/>non-reference content</li>
             </ul>
           </section>
         </section>
@@ -321,20 +321,6 @@
           </section>
 
 
-          <section>
-            <h3>My current setup at work</h3>
-            <ul>
-              <li>Jekyll + custom theme with no header/footer</li>
-              <li>Use existing internal Git infrastructure</li>
-              <li>Custom-built publishing pipeline</li>
-                <ul><li>Builds output, then ingests HTML into S3</li>
-                  <li>Server requests pull matching files from S3 store and insert into template with header/footer</li>
-                </ul>
-                <li>Embed Swagger UI directly onto page or link to it</li>
-                      </ul>
-              <p><a target="_blank" href="https://developer.amazon.com/appstore/documentation">View sample</a></p>
-
-          </section>
 
         </section>
 
@@ -343,6 +329,23 @@
           <h2>Lessons learned</h2>
           <img src="media/vectors/publishing-apis_lessonslearned.svg"/>
 </section>
+
+<section>
+  <h3>My current setup at work</h3>
+  <ul>
+    <li>Jekyll + custom theme with no header/footer</li>
+    <li>Use existing internal Git infrastructure</li>
+    <li>Custom-built publishing pipeline</li>
+      <ul><li>Builds output, then ingests HTML into S3</li>
+        <li>Server requests pull matching files from S3 store and insert into template with header/footer</li>
+      </ul>
+      <li>Embed Swagger UI directly onto page or link to it</li>
+            </ul>
+    <p><a target="_blank" href="https://developer.amazon.com/appstore/documentation">View sample</a></p>
+
+</section>
+
+
           <section>
             <h3>My experience switching to docs-as-code</h3>
             <ul>
@@ -355,9 +358,9 @@
           </section>
 
           <section>
-            <h3>Working with engineers on implementation</h3>
+            <h3>Other implementation realizations</h3>
             <ul>
-              <li>3rd-party hosting ideal but difficult with Info Sec</li>
+              <li>3rd-party hosting ideal but permission can be an issue</li>
               <li>Engineers understand infrastructure but not SSGs</li>
               <li>You build the theme with the features you want</li>
               <li>1-2 repos max, feeding into same publishing pipeline</li>
@@ -390,7 +393,7 @@
                    <p><span class="myname">Tom Johnson</span><br/>
                       &mdash; <a target="_blank" href="http://idratherbewriting.com">idratherbewriting.com</a><br/>
                       &mdash;  <a target="_blank" href="http://twitter.com/tomjohnson">@tomjohnson</a><br />
-                      &mdash; <a target="_blank" href="mailto:tomjoht@gmail.com">tomjoht@gmail.com</a>
+                      &mdash; <a target="_blank" href="mailto:tom@idratherbewriting.com">tom@idratherbewriting.com</a>
                    </p>
                 </div>
               </section>
