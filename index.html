@@ -143,16 +143,16 @@
               <li>All API docs are developer docs, but not vice versa</li>
               <li>API docs include both reference and non-reference content</li>
               <li>Tool options in this space are mind-boggling</li>
-              <li>There's a tools gap for integrating reference and <br/>non-reference content</li>
+              <li>There's a tools gap for integrating API reference docs and <br/>non-reference content</li>
             </ul>
           </section>
         </section>
 
           <section>
             <section>
-            <h2>What makes publishing developer docs unique?</h2>
+            <h2>Why not just use traditional HATs?</h2>
             <ul>
-              <li>Developer authors</li>
+              <li>Developers are authors</li>
               <li>API structure/templates</li>
               <li>API requests demo'd on page</li>
               <li>API docs are the product interface</li>
@@ -183,7 +183,7 @@
             <h3>Developers treat docs as code</h3>
             <ul>
               <li>Markdown or rST</li>
-              <li>Static site generator</li>
+              <li>Static site generators</li>
               <li>IDE-like text editor</li>
               <li>Git to manage content</li>
               <li>Build from server</li>
@@ -195,8 +195,8 @@
             <ul>
               <li>Readable as code</li>
               <li>Compatible with version control</li>
-              <li>For semantics, define in YAML frontmatter</li>
-              <li>Supplement with SSG scripting languages</li>
+              <li>Semantics defined in YAML frontmatter</li>
+              <li>Scripting languages handle complex scenarios</li>
               <li>Risk: Lack of standards creates tool lock-in</li>
             </ul>
           </section>
@@ -214,15 +214,15 @@
           <section>
             <h3>Build from server</h3>
             <ul>
-              <li>"Continuous delivery"</li>
-              <li>No manual uploading of files</li>
+              <li>"Continuous delivery" is the killer feature</li>
+              <li>No manual uploading/deploying files</li>
               <li>Focus on content</li>
             </ul>
 
             </section>
 
           <section>
-            <h3>Reference docs for APIs</h3>
+            <h3>API reference content</h3>
             <ul>
               <li>Use templates for common API sections</li>
               <li>Describe with OpenAPI specification</li>
@@ -254,6 +254,7 @@
                 <li><a target="_blank" href="http://jekyllrb.com">Jekyll</a></li>
                 <li><a target="_blank" href="https://gohugo.io/">Hugo</a></li>
                 <li><a target="_blank" href="http://www.sphinx-doc.org/en/stable/">Sphinx</a></li>
+                <li>+350 more</li>
                 </ul>
                 <p style="font-size: .7em; background-color: #f0f0f0; padding: 15px;">Speed &bull; Format &bull; Community</p>
               </ul>
@@ -279,6 +280,7 @@
                 <li><a target="_blank" href="https://forestry.io/">Forestry.io</a></li>
                 <li><a target="_blank" href="https://www.netlifycms.org/">Netlify CMS</a></li>
                 <li><a target="_blank" href="http://readme.io/">Readme.io</a></li>
+                <li>+ dozens more</li>
               </ul>
               <p style="font-size: .7em; background-color: #f0f0f0; padding: 15px;">Continuous delivery &bull; Integration &bull; Authentication</p>
 
@@ -303,7 +305,7 @@
 
 
             <section>
-              <h3>Problem</h3>
+              <h3>Integration challenges</h3>
 
                 <p>Need to combine API reference docs with <br/>non-reference content</p>
                 <img src="media/vectors/publishing-apis_integrationproblem.svg"/>
@@ -316,7 +318,7 @@
               <li>Define your requirements</li>
               <li>Choose your priorities</li>
               <li>Consider the time you want to spend on tools</li>
-              <li>Hope that you don't sink months into the wrong tool</li>
+              <li>Hope that you don't sink months into the wrong tools and platforms</li>
             </ol>
           </section>
 
@@ -337,7 +339,7 @@
     <li>Use existing internal Git infrastructure</li>
     <li>Custom-built publishing pipeline</li>
       <ul><li>Builds output, then ingests HTML into S3</li>
-        <li>Server requests pull matching files from S3 store and insert into template with header/footer</li>
+        <li>Server requests pull matching files from S3 store and inserts into template with header/footer</li>
       </ul>
       <li>Embed Swagger UI directly onto page or link to it</li>
             </ul>
@@ -360,9 +362,9 @@
           <section>
             <h3>Other implementation realizations</h3>
             <ul>
-              <li>3rd-party hosting ideal but permission can be an issue</li>
+              <li>3rd-party hosting ideal but company permission can be an issue</li>
               <li>Engineers understand infrastructure but not SSGs</li>
-              <li>You build the theme with the features you want</li>
+              <li>Collaborative effort with engineers, not a DIY project</li>
               <li>1-2 repos max, feeding into same publishing pipeline</li>
             </ul>
           </section>
@@ -372,10 +374,10 @@
             <ul>
               <li>Describe REST with OpenAPI spec</li>
               <li>Build continously from the server</li>
-              <li>Manage content through Git</li>
+              <li>Manage content with Git</li>
               <li>Seek 3rd-party solutions when possible</li>
               <li>Don't spend infinity in the rabbit hole of tools</li>
-              <li>There's a tradeoff between control/flexibility versus time/effort/responsibility</li>
+              <li>Weigh the tradeoff between control/flexibility versus time/effort/responsibility</li>
             </ul>
           </section>
         </section>
